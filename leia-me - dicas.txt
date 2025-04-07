@@ -1,0 +1,5 @@
+Bootstrap (facilita o layout responsivo e os estilos).
+
+AOS (Animate On Scroll) (efeitos de animação ao rolar a página).
+
+Swiper.js (para carrosséis de imagens, caso precise).
