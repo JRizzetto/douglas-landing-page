@@ -126,23 +126,21 @@
   justify-content: center;
   text-align: center;
   z-index: 1;
+  position: absolute;
 }
 
 .balao-container .div-balao.primeiro {
-  position: absolute;
   top: 0;
   right: 0;
 }
 
 .balao-container .div-balao.segundo {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .balao-container .div-balao.terceiro {
-  position: absolute;
   bottom: 0;
   left: 0;
 }
@@ -163,13 +161,28 @@
 }
 
 .div-quem {
-  position: relative;
   width: 501px;
   height: 400px;
   margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.div-quem a {
+.logo-quem {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-quem .logo-underline {
+  width: 100%;
+  height: 3px;
+  background-color: #81cdff;
+}
+
+.div-quem .logo-quem a {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
   font-size: 24px;
@@ -180,7 +193,6 @@
   justify-content: flex-start;
   color: #81cdff;
   text-decoration: none;
-  border-bottom: 2px solid #81cdff;
   padding: 10px 16px;
   gap: 10px;
 }
@@ -200,7 +212,6 @@
   font-size: 22px;
   line-height: 100%;
   padding: 16px 0;
-  position: absolute;
   bottom: 0;
   height: 54px;
   color: #fafafa;
@@ -208,13 +219,13 @@
 
 .div-missao {
   position: relative;
-  width: 40%;
+  width: 400px;
   height: 400px;
   margin-top: 70px;
+  padding-top: 50px;
 }
 
 .div-missao p {
-  margin-top: 70px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -225,7 +236,6 @@
 }
 
 .div-missao .btn-agenda {
-  position: absolute;
   height: 54px;
   width: 100%;
   background: #eff5f9;
@@ -239,6 +249,7 @@
   margin-top: 80px;
   bottom: 0;
   cursor: pointer;
+  position: absolute;
 }
 
 .nossos-servicos {
@@ -259,18 +270,19 @@
 }
 
 .servicos-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   width: 100%;
   height: auto;
   padding: 0px 62px 120px 62px;
-  gap: 16px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-content: space-between; /* separa os itens horizontalmente */
+  align-items: start; /* alinha os itens ao topo */
 }
 
 .servicos-container .div-servico {
   max-width: 368px;
   height: auto;
-  flex: 1 1 calc(33.33% - 19px);
   border-radius: 24px;
   padding: 16px 19px 24px 19px;
   background-color: #276691;
@@ -597,25 +609,294 @@
 
 /*MEDIA QUERIES*/
 
-@media (max-width: 700px) {  
-  .hero-section h1 {
+@media (max-width: 1100px) {
+  .hero-container p {
+    font-size: 25px;
+  }
+
+  .footer-container .container-logo-footer img {
+    width: 900px;
+  }
+}
+
+@media (max-width: 990px) {
+  .missao-section .div-quem h2 {
+    font-size: 50px;
+  }
+
+  .missao-section .div-quem p {
+    font-size: 16px;
+  }
+
+  .footer-container .content-container {
+    width: 85%;
+  }
+
+  .footer-container .content-container .btn-agenda {
+    width: 300px;
+  }
+
+  .saiba-mais p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-container h1 {
+    font-size: 60px;
+  }
+
+  .hero-container h2 {
+    font-size: 70px;
+  }
+
+  .hero-container p {
+    font-size: 16px;
+  }
+
+  .hero-container .btn-agenda {
+    width: 300px;
+    height: 50;
+    font-size: 14px;
+  }
+
+  .balao-container .div-balao {
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+  }
+
+  .div-missao p {
+    font-size: 20px;
+  }
+
+  .missao-section .div-missao .btn-agenda {
+    width: 350px;
+    height: 65px;
+    font-size: 14px;
+  }
+
+  .perguntas-section .pergunta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perguntas-section .container-section {
+    width: 80%;
+    text-align: center;
+  }
+
+  .saiba-mais h2 {
+    font-size: 30px;
+  }
+
+  .footer-container .container-logo-footer img {
+    width: 800px;
+  }
+
+  .saiba-mais .btn-agenda {
+    width: 300px;
+    height: 65px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .missao-section .div-quem h2 {
+    font-size: 35px;
+  }
+
+  .footer-container .container-logo-footer img {
+    width: 700px;
+  }
+
+  .hero-container h1 {
     font-size: 40px;
   }
-  
-  .hero-section h2 {
+
+  .hero-container h2 {
     font-size: 50px;
-    z-index: 1;
   }
-  
-  .hero-section p {
-    font-size: 20px;
-    z-index: 1;
+
+  .balao-container {
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 100vh;
+    padding: 100px 0;
   }
-  
-  .hero-section .btn-agenda {
-    width: 250px;
-    height: 50px;
+
+  .balao-container .div-balao {
+    position: static;
+  }
+
+  .balao-container .div-balao.segundo {
+    top: 50%;
+    left: 50%;
+    transform: translate(0);
+  }
+
+  .hero-container {
+    position: static;
+    height: 100vh;
+    justify-content: space-evenly;
+    margin-left: 48px;
+    padding: 100px 0;
+  }
+
+  .missao-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .missao-section .div-quem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .missao-section .div-missao {
+    margin-top: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .div-missao .btn-agenda {
+    margin-top: 50px;
+    position: static;
+  }
+
+  .nossos-servicos {
+    margin-top: 850px;
+    text-align: center;
+  }
+
+  .nossos-servicos .servicos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pergunta-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-container .container-logo-footer img {
+    width: 500px;
+  }
+
+  .depoimentos .trabalhos {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+  }
+
+  .saiba-mais {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .para-voces p,
+  .transparencia p {
     font-size: 16px;
-    z-index: 1;
+  }
+
+  .para-voces a,
+  .transparencia a {
+    font-size: 22px;
+  }
+
+  .transparencia .transparencia-text {
+    font-size: 24px;
+  }
+
+  .redes-icons {
+    width: 256px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 37px;
+  }
+
+  .redes-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffffffb2;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-section .hero-container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .hero-section .balao-container {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    top: 600px;
+  }
+
+  .nossos-servicos h2 {
+    font-family: "Nunito Sans", sans-serif;
+    color: #eff5f9;
+    padding: 30px 0;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 102%;
+    letter-spacing: 0;
+  }
+
+  .depoimentos .perguntas-section {
+    margin-top: 70px;
+  }
+
+  .footer-container .content-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container .content-container .transparencia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-container .container-logo-footer img {
+    width: 300px;
   }
 }
