@@ -9,6 +9,7 @@
   height: auto;
   position: relative;
   background-color: #eff5f9;
+  overflow-y: hidden;
 }
 
 .hero-section {
@@ -908,5 +909,9 @@
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  .missao-section .div-quem p {
+    font-size: 14px;
   }
 }
