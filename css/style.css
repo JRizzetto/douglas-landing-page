@@ -868,6 +868,10 @@
     top: 600px;
   }
 
+  .nossos-servicos {
+    margin-top: 450px;
+  }
+
   .nossos-servicos h2 {
     font-family: "Nunito Sans", sans-serif;
     color: #eff5f9;
@@ -898,5 +902,11 @@
 
   .footer-container .container-logo-footer img {
     width: 300px;
+  }
+
+  .img-principal {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
